@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,16 +22,17 @@ public class Usuario {
 
     @Column(unique = true)
     private String email;
+
     @Column(unique = true)
     private String username;
+
     private String password;
+
+    private boolean activo;
 
     @ManyToOne
     @JoinColumn(name = "id_rol")
     private Rol rol;
 
-   // @JsonIgnore
-   // @OneToMany(mappedBy = "id_usuario", cascade = CascadeType.ALL)
-   // private List<CajaUsuario> id_caja_usuario;
 
 }

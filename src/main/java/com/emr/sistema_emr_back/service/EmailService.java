@@ -12,10 +12,6 @@ public class EmailService {
     private JavaMailSender mailSender;
 
     public void enviarCredenciales(String email, String password) {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo(email);
-        message.setSubject("Credenciales de Acceso");
-        message.setText("Su usuario es: " + email + " y su contraseña temporal es: " + password);
-        mailSender.send(message);
+
     }
 }
